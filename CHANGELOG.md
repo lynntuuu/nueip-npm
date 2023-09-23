@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/lynntuuu/nueip-npm/compare/v1.0.2...v1.0.3) (2023-09-23)
+
+
+### Bug Fixes
+
+* change npm package params ([0640e06](https://github.com/lynntuuu/nueip-npm/commit/0640e06581163381447e393826fe9f90205f219d))
+
 ## [1.0.2](https://github.com/lynntuuu/nueip-npm/compare/v1.0.1...v1.0.2) (2023-09-23)
 
 
