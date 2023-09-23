@@ -9,11 +9,6 @@ permissions:
   pull-requests: write
   packages: write
 
-env:
-    PROJECT_ID: nueip-research
-    RUN_REGION: asia-east1
-    SERVICE_NAME: lynn-test
-
 jobs:
   Nueip-Npm-Gcp-Actions:
     runs-on: ubuntu-latest
