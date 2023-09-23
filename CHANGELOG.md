@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/lynntuuu/nueip-npm/compare/v1.0.0...v1.0.1) (2023-09-23)
+
+
+### Bug Fixes
+
+* add deploy to GCP workflow ([a81a9d6](https://github.com/lynntuuu/nueip-npm/commit/a81a9d64ebae089ca1f1bfd3721c11caa328243e))
+
 ## 1.0.0 (2023-09-19)
 
 
