@@ -23,10 +23,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           release-type: node
-          package-name: nueip-npm
-
-      - name: Check release_created
-        run: echo "${{ steps.release.outputs.release_created }}"    
+          package-name: nueip-npm  
             
       - uses: actions/checkout@v3
         if: ${{ steps.release.outputs.release_created }}
