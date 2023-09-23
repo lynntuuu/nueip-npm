@@ -1,0 +1,59 @@
+name: Nueip Npm Gcp
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: write
+  pull-requests: write
+  packages: write
+
+env:
+    PROJECT_ID: nueip-research
+    RUN_REGION: asia-east1
+    SERVICE_NAME: lynn-test
+
+jobs:
+  Nueip-Npm-Gcp-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        id: release
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          release-type: node
+          package-name: nueip-npm
+
+      - name: Check release_created
+        run: echo "${{ steps.release.outputs.release_created }}"    
+            
+      - uses: actions/checkout@v3
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: Install dependencies
+        run: npm install  
+        if: ${{ steps.release.outputs.release_created }}  
+
+      - id: 'auth'
+        uses: 'google-github-actions/auth@v1'
+        with:
+          credentials_json: '${{ secrets.GCP_CREDENTIALS }}'   
+
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v1
+        with:
+          version: '>= 363.0.0'
+        if: ${{ steps.release.outputs.release_created }}          
+
+      - run: |
+            gcloud artifacts print-settings npm \
+              --project=nueip-research \
+              --repository=lynn-test \
+              --location=asia-east1 \
+              --scope=@lynntuuu > .npmrc
+            npx google-artifactregistry-auth --repo-config=.npmrc --credential-config=.npmrc
+        if: ${{ steps.release.outputs.release_created }}      
+
+      - run: npm publish
+        if: ${{ steps.release.outputs.release_created }}  

@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "publishConfig": {
-    "@lynntuuu:registry": "https://npm.pkg.github.com"
+    "@lynntuuu:registry": "https://asia-east1-npm.pkg.dev/nueip-research/lynn-test/"
   },
   "repository": {
     "type": "git",
