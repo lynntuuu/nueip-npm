@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.5](https://github.com/lynntuuu/nueip-npm/compare/v1.1.4...v1.1.5) (2023-09-26)
+
+
+### Bug Fixes
+
+* remove unnecessary information ([69d03a0](https://github.com/lynntuuu/nueip-npm/commit/69d03a0d9da8305a5e2f282d8a0c151ddb938e90))
+
 ## [1.1.4](https://github.com/lynntuuu/nueip-npm/compare/v1.1.3...v1.1.4) (2023-09-23)
 
 
