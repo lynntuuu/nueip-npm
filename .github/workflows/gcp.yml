@@ -7,7 +7,6 @@ on:
 permissions:
   contents: write
   pull-requests: write
-  packages: write
 
 env:
   PROJECT_ID: nueip-research
