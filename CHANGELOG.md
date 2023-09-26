@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.6](https://github.com/lynntuuu/nueip-npm/compare/v1.1.5...v1.1.6) (2023-09-26)
+
+
+### Bug Fixes
+
+* change gcp yaml file ([5aaa059](https://github.com/lynntuuu/nueip-npm/commit/5aaa0591fc3b42b2598ecbba5fb1a6c17cea180e))
+
 ## [1.1.5](https://github.com/lynntuuu/nueip-npm/compare/v1.1.4...v1.1.5) (2023-09-26)
 
 
